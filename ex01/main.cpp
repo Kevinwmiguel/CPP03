@@ -10,13 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main()
 {
     ClapTrap Clap("Clap");
     ClapTrap Clap2("Trap");
-    
+    ScavTrap Trap("scrav");
+
     Clap.attack("Trap");
     Clap2.beRepaired(3);
     
@@ -24,6 +25,7 @@ int main()
     Clap.takeDamage(999);
 
     Clap2.beRepaired(4);
+    
     
 
     return (0);

@@ -12,3 +12,19 @@
 
 #include "ScavTrap.hpp"
 
+ScavTrap:: ScavTrap()
+{
+	std::cout << "The constructor has been called";
+}
+
+void ScavTrap::guardGate()
+{
+	std::cout << " ScavTrap is now in Gate keeper mode." << std::endl;
+}
+
+ScavTrap:: ScavTrap(std::string name)
+{
+	this->name = name;
+	std::cout << "ScavTrap Constractor was called to " << name << std::endl;
+}
+
