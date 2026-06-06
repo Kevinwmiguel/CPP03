@@ -6,7 +6,7 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 23:40:44 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/04 00:20:05 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/06 12:14:36 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int main()
 {
     ClapTrap Clap("Clap");
     ClapTrap Clap2("Trap");
+    
     ScavTrap Trap("scrav");
 
     Clap.attack("Trap");
@@ -26,7 +27,10 @@ int main()
 
     Clap2.beRepaired(4);
     
-    
+    Trap.guardGate();
+    Trap.attack("Clap");
+    Trap.takeDamage(999);
+    Trap.attack("Clap");
 
     return (0);
 }
