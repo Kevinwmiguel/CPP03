@@ -6,7 +6,7 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 00:29:43 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/06 13:36:31 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/07 12:45:22 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,25 +27,21 @@ void ScavTrap::guardGate()
 {
 	if (this->_energyPoints > 0 && this->_hitPoints > 0)
 	{
-		std::cout << "ScavTrap is now in Gate keeper mode." << std::endl;
+		std::cout << "ScavTrap " << _name << " is now in Gate keeper mode." << std::endl;
 		this->_energyPoints--;
 	}
 	else if (this->_energyPoints <= 0)
 	{
-		std::cout	<< " tried to go in Gate keeper mode, but has no energyPoints left to perform guardGate!\n";
+		std::cout	<< "ScavTrap " << _name << " tried to go in Gate keeper mode, but has no energyPoints left to perform guardGate!\n";
 	}
 	else
 	{
-		std::cout	<< " tried to go in Gate keeper mode, but is already destroyed!\n";
+		std::cout	<< "ScavTrap " << _name << " tried to go in Gate keeper mode, but is already destroyed!\n";
 	}
 }
 
-ScavTrap:: ScavTrap(std::string name) : ClapTrap(name)
+ScavTrap:: ScavTrap(std::string name)
 {
-	_name = name;
-	_hitPoints = 100;
-	_energyPoints = 50;
-	_attackDamage = 20;
 	std::cout << "ScavTrap Constractor was called to " << name << std::endl;
 }
 
@@ -67,10 +63,10 @@ void ScavTrap::attack(const std::string& target)
 	}
 	else if (this->_energyPoints <= 0)
 	{
-		std::cout	<< " tried to attack " << target << ", but has no energyPoints left to perform attack!\n";
+		std::cout	<< "ScavTrap " << _name << " tried to attack " << target << ", but has no energyPoints left to perform attack!\n";
 	}
 	else
 	{
-		std::cout	<< " tried to attack " << target << ", but is already destroyed!\n";
+		std::cout	<< "ScavTrap " << _name << " tried to attack " << target << ", but is already destroyed!\n";
 	}
 }

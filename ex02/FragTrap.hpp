@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/03 23:40:44 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/07 12:25:49 by kwillian         ###   ########.fr       */
+/*   Created: 2026/06/06 17:27:13 by kwillian          #+#    #+#             */
+/*   Updated: 2026/06/07 12:38:27 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DiamondTrap.hpp"
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
-int main()
+#include <iostream>
+#include <string.h>
+#include <cctype>
+#include "ClapTrap.hpp"
+
+class FragTrap : public ClapTrap
 {
-    DiamondTrap diamond("Diamond");
+    public:
+    FragTrap();
+    FragTrap(std::string name);
+    ~FragTrap();
+    void highFivesGuys(void);
+    FragTrap& operator=(FragTrap& other);
+};
 
-    diamond.attack("Enemy");
-    diamond.takeDamage(40);
-    diamond.beRepaired(25);
-
-    diamond.whoAmI();
-
-    diamond.guardGate();
-    diamond.highFivesGuys();
-
-    for (int i = 0; i < 105; i++)
-        diamond.attack("Dummy");
-
-    return (0);
-}
+#endif

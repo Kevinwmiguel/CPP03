@@ -6,7 +6,7 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 23:40:44 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/06 12:14:36 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/07 12:23:12 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,14 @@
 
 int main()
 {
-    ClapTrap Clap("Clap");
-    ClapTrap Clap2("Trap");
-    
-    ScavTrap Trap("scrav");
+    ScavTrap scav("Guardian");
+    scav.attack("Bandit");
+    scav.takeDamage(30);
+    scav.beRepaired(15);
+    scav.guardGate();
 
-    Clap.attack("Trap");
-    Clap2.beRepaired(3);
-    
-    Clap2.attack("Clap");
-    Clap.takeDamage(999);
-
-    Clap2.beRepaired(4);
-    
-    Trap.guardGate();
-    Trap.attack("Clap");
-    Trap.takeDamage(999);
-    Trap.attack("Clap");
+    for (int i = 0; i < 55; i++)
+        scav.attack("Target");
 
     return (0);
 }

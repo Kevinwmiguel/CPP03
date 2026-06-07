@@ -1,6 +1,6 @@
-NAME	 =	Aaaaand...OPEN
+NAME	 =	Repetitivework
 
-SRCS     =	ClapTrap.cpp main.cpp
+SRCS     =	ClapTrap.cpp FragTrap.cpp main.cpp
 
 OBJS     =   $(SRCS:.cpp=.o)
 
@@ -8,7 +8,6 @@ CXX		=	c++
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 all : $(NAME)
-
 
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)

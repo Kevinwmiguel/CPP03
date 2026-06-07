@@ -6,28 +6,36 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 15:57:59 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/06 12:13:11 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/07 12:50:21 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
+ClapTrap& ClapTrap::operator=(ClapTrap& other)
+{
+    if (this != &other)
+    {
+        _name = other._name;
+        _hitPoints = other._hitPoints;
+        _energyPoints = other._energyPoints;
+        _attackDamage = other._attackDamage;
+    }
+    return *this;
+}
+
 ClapTrap:: ClapTrap()
 {
     std::cout << "ClapTrap Default Constractor was called" << std::endl;
-    this->_name = "Default";
-    this->_hitPoints = 10;
-    this->_energyPoints = 0;
-    this->_attackDamage = 0;
 }
 
 ClapTrap:: ClapTrap(std::string name)
 {
     std::cout << "ClapTrap " << name << " created." << std::endl;
     this->_name = name;
-    this->_hitPoints = 10;
-    this->_energyPoints = 10;
-    this->_attackDamage = 0;
+    this->_hitPoints = 100;
+    this->_energyPoints = 50;
+    this->_attackDamage = 20;
 }
 
 ClapTrap::~ClapTrap()

@@ -1,0 +1,47 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/06 17:27:04 by kwillian          #+#    #+#             */
+/*   Updated: 2026/06/07 12:56:46 by kwillian         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "FragTrap.hpp"
+
+FragTrap& FragTrap::operator=(FragTrap& other)
+{
+    if (this != &other)
+    {
+        _name = other._name;
+        _hitPoints = other._hitPoints;
+        _energyPoints = other._energyPoints;
+        _attackDamage = other._attackDamage;
+    }
+    return *this;
+}
+
+FragTrap:: FragTrap(std::string name)
+{
+    std::cout << "FragTrap " << name << " created." << std::endl;
+    this->_name = name;
+}
+
+FragTrap::FragTrap()
+{
+    std::cout << "FragTrap " << " created." << std::endl;
+}
+
+FragTrap::~FragTrap()
+{
+    std::cout << "FragTrap " << " destroyed." << std::endl;
+}
+
+void FragTrap::highFivesGuys(void)
+{
+    std::cout << " FragTrap " << " High Fives Guys!" << std::endl;
+}
+

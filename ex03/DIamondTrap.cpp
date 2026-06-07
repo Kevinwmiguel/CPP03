@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   DIamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/03 23:40:44 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/07 12:25:49 by kwillian         ###   ########.fr       */
+/*   Created: 2026/06/07 10:56:04 by kwillian          #+#    #+#             */
+/*   Updated: 2026/06/07 12:27:16 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-int main()
+DiamondTrap:: DiamondTrap()
 {
-    DiamondTrap diamond("Diamond");
+    std::cout << "The DiamondTrap Constructor has been called " << std::endl;
+}
 
-    diamond.attack("Enemy");
-    diamond.takeDamage(40);
-    diamond.beRepaired(25);
-
-    diamond.whoAmI();
-
-    diamond.guardGate();
-    diamond.highFivesGuys();
-
-    for (int i = 0; i < 105; i++)
-        diamond.attack("Dummy");
-
-    return (0);
+DiamondTrap:: DiamondTrap(const std::string& name)
+{
+    std::cout << "The DiamondTrap Constructor has been called " << std::endl;
+    _name = name;
 }
