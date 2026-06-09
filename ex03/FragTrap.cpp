@@ -27,10 +27,10 @@ FragTrap& FragTrap::operator=(const FragTrap& other)
 FragTrap:: FragTrap(std::string name)
 {
     std::cout << "FragTrap " << name << " created." << std::endl;
-    this->_name = name;
-    this->_hitPoints = 100;
-    this->_energyPoints = 100;
-    this->_attackDamage = 30;
+    _name = name;
+    _hitPoints = 100;
+    _energyPoints = 100;
+    _attackDamage = 30;
 }
 
 FragTrap::FragTrap()
@@ -45,6 +45,6 @@ FragTrap::~FragTrap()
 
 void FragTrap::highFivesGuys(void)
 {
-    std::cout << " FragTrap " << this->_name << " High Fives Guys!" << std::endl;
+    std::cout << " FragTrap " << _name << " High Fives Guys!" << std::endl;
 }   
 

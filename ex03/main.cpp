@@ -19,12 +19,10 @@ int main()
     diamond.attack("Enemy");
     diamond.takeDamage(40);
     diamond.beRepaired(25);
-    diamond.whoAmI();
+    for (int i = 0; i < 5; i++)
+        diamond.attack("Dummy");
     diamond.guardGate();
     diamond.highFivesGuys();
-
-    for (int i = 0; i < 105; i++)
-        diamond.attack("Dummy");
-
+    diamond.whoAmI();
     return (0);
 }

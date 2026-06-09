@@ -17,12 +17,13 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
-class DiamondTrap : public ScavTrap, public FragTrap
+class DiamondTrap : virtual public ScavTrap, virtual public FragTrap
 {
     private:
-        std::string name;
+        std::string _name;
     public:
-        DiamondTrap(std::string name): ClapTrap(name + "_clap_name"),ScavTrap(name), FragTrap(name);
+        DiamondTrap();
+        DiamondTrap(const std::string& name);
         ~DiamondTrap();
         void whoAmI();
         DiamondTrap&operator=(const DiamondTrap& other);

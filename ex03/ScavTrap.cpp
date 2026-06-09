@@ -33,10 +33,10 @@ ScavTrap:: ~ScavTrap()
 
 void ScavTrap::guardGate()
 {
-	if (this->_energyPoints > 0 && this->_hitPoints > 0)
+	if (_energyPoints > 0 && _hitPoints > 0)
 	{
 		std::cout << "ScavTrap " << _name << " is now in Gate keeper mode." << std::endl;
-		this->_energyPoints--;
+		_energyPoints--;
 	}
 	else if (this->_energyPoints <= 0)
 	{
@@ -51,10 +51,10 @@ void ScavTrap::guardGate()
 ScavTrap:: ScavTrap(std::string name)
 {
 	std::cout << "ScavTrap Constractor was called to " << name << std::endl;
-	this->_name = name;
-	this->_hitPoints = 100;
-	this->_energyPoints = 50;
-	this->_attackDamage = 20;
+	_name = name;
+	_hitPoints = 100;
+	_energyPoints = 50;
+	_attackDamage = 20;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& other)
@@ -68,12 +68,12 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& other)
 
 void ScavTrap::attack(const std::string& target)
 {
-	if (this->_energyPoints > 0 && this->_hitPoints > 0)
+	if (_energyPoints > 0 && _hitPoints > 0)
 	{
 		std::cout  << "ScavTrap " << _name << " attacks " << target << " causing " << _attackDamage << " points of damage! " << std::endl;
-		this->_energyPoints--;
+		_energyPoints--;
 	}
-	else if (this->_energyPoints <= 0)
+	else if (_energyPoints <= 0)
 	{
 		std::cout	<< "ScavTrap " << _name << " tried to attack " << target << ", but has no energyPoints left to perform attack!\n";
 	}

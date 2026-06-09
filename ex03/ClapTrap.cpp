@@ -38,6 +38,11 @@ ClapTrap::~ClapTrap()
     std::cout << "ClapTrap " << _name << " destroyed." << std::endl;
 }
 
+ClapTrap::ClapTrap()
+{
+    std::cout << "ClapTrap "  << " destroyed." << std::endl;
+}
+
 void ClapTrap:: attack(const std::string& target)
 {
     if (this->_energyPoints > 0 && this->_hitPoints > 0)
