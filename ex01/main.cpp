@@ -6,7 +6,7 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 23:40:44 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/07 12:23:12 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/09 13:32:37 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int main()
     scav.takeDamage(30);
     scav.beRepaired(15);
     scav.guardGate();
-
-    for (int i = 0; i < 55; i++)
+    scav.getinfo();
+    for (int i = 0; i < 4; i++)
         scav.attack("Target");
 
     return (0);

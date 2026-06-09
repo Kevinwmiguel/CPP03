@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/25 14:42:18 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/09 15:46:26 by kwillian         ###   ########.fr       */
+/*   Created: 2026/06/04 00:30:13 by kwillian          #+#    #+#             */
+/*   Updated: 2026/06/09 15:49:15 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-#define CLAPTRAP_HPP
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
 
-# include <iostream>
-# include <cctype>
+#include "ClapTrap.hpp"
+#include <iostream>
+#include <string.h>
+#include <cctype>
 
-class ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
-    private:
-    std::string _name;
-    unsigned int         _hitPoints;
-    unsigned int         _energyPoints;
-    unsigned int         _attackDamage;
-    
     public:
     //void    getinfo();
-    ClapTrap();
-    ~ClapTrap();
-    ClapTrap(std::string name);
-    ClapTrap&operator=(const ClapTrap& other);
+    ScavTrap();
+    ~ScavTrap();
+    ScavTrap(std::string name);
+    ScavTrap&operator=(const ScavTrap& other);
     void attack(const std::string& target);
-    void takeDamage(unsigned int amount);
-    void beRepaired(unsigned int amount);
+    void guardGate();
 };
 
 #endif

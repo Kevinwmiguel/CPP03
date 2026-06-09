@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/03 23:40:44 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/09 13:05:18 by kwillian         ###   ########.fr       */
+/*   Created: 2026/06/06 17:27:13 by kwillian          #+#    #+#             */
+/*   Updated: 2026/06/09 15:49:09 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
+
+#include <iostream>
+#include <string.h>
+#include <cctype>
 #include "ClapTrap.hpp"
 
-int main()
+class FragTrap : virtual public ClapTrap
 {
-    ClapTrap a("Kevin");
-    ClapTrap b("Enemy");
-    a.attack("Enemy");
-    b.takeDamage(0);
-    b.attack("Kevin");
-    a.takeDamage(0);
-    a.beRepaired(5);
-    //a.getinfo();
-    for (int i = 0; i < 5; i++)
-        a.attack("Enemy");
-    return (0);
-}
+    public:
+    FragTrap();
+    FragTrap(std::string name);
+    ~FragTrap();
+    void highFivesGuys(void);
+    FragTrap& operator=(const FragTrap& other);
+};
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 10:27:48 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/07 10:49:30 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/09 15:54:37 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@ class DiamondTrap : public ScavTrap, public FragTrap
     private:
         std::string name;
     public:
-        DiamondTrap(std::string name);
+        DiamondTrap(std::string name): ClapTrap(name + "_clap_name"),ScavTrap(name), FragTrap(name);
         ~DiamondTrap();
         void whoAmI();
+        DiamondTrap&operator=(const DiamondTrap& other);
 };
 
 #endif

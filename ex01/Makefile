@@ -9,14 +9,15 @@ CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 all : $(NAME)
 
-
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
-	echo "compiling \nDone"
+	@printf "Compiling \nDone\n"
 clean:
-	rm -f $(OBJS);
+	rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME);
+	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re

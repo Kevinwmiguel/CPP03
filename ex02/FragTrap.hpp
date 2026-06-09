@@ -6,7 +6,7 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 17:27:13 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/07 12:38:27 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/09 15:47:14 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class FragTrap : public ClapTrap
     FragTrap(std::string name);
     ~FragTrap();
     void highFivesGuys(void);
-    FragTrap& operator=(FragTrap& other);
+    FragTrap& operator=(const FragTrap& other);
 };
 
 #endif

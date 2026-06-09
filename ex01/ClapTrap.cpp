@@ -6,13 +6,13 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 15:57:59 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/07 12:50:21 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/09 15:47:44 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap& ClapTrap::operator=(ClapTrap& other)
+ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 {
     if (this != &other)
     {
@@ -33,9 +33,9 @@ ClapTrap:: ClapTrap(std::string name)
 {
     std::cout << "ClapTrap " << name << " created." << std::endl;
     this->_name = name;
-    this->_hitPoints = 100;
-    this->_energyPoints = 50;
-    this->_attackDamage = 20;
+    this->_hitPoints = 10;
+    this->_energyPoints = 0;
+    this->_attackDamage = 0;
 }
 
 ClapTrap::~ClapTrap()
