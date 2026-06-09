@@ -6,7 +6,7 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 10:27:48 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/09 15:54:37 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/10 00:36:24 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class DiamondTrap : public ScavTrap, public FragTrap
     private:
         std::string _name;
     public:
-        void getinfo();
+        //void getinfo();
         DiamondTrap();
         DiamondTrap(const std::string& name);
         ~DiamondTrap();

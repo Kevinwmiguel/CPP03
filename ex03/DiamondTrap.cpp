@@ -6,20 +6,20 @@
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 10:56:04 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/10 00:23:19 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/10 00:35:50 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-void DiamondTrap::getinfo()
-{
-    std::cout << " name " << this->_name << " attack damage " <<
-        this->_attackDamage << " hitpoints " 
-        << this->_hitPoints << " energy points "
-		<< this->_energyPoints <<
-		std::endl << std::endl << std::endl;
-}
+// void DiamondTrap::getinfo()
+// {
+//     std::cout << " name " << this->_name << " attack damage " <<
+//         this->_attackDamage << " hitpoints " 
+//         << this->_hitPoints << " energy points "
+// 		<< this->_energyPoints <<
+// 		std::endl << std::endl << std::endl;
+// }
 
 DiamondTrap:: DiamondTrap()
 {
