@@ -51,7 +51,7 @@ void ScavTrap::guardGate()
 ScavTrap:: ScavTrap(std::string name)
 {
 	std::cout << "ScavTrap Constractor was called to " << name << std::endl;
-	_name = name;
+	//_name = name;
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;

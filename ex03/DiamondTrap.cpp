@@ -12,8 +12,20 @@
 
 #include "DiamondTrap.hpp"
 
+void DiamondTrap::getinfo()
+{
+    std::cout << " name " << this->_name << " attack damage " <<
+        this->_attackDamage << " hitpoints " 
+        << this->_hitPoints << " energy points "
+		<< this->_energyPoints <<
+		std::endl << std::endl << std::endl;
+}
+
 DiamondTrap:: DiamondTrap()
 {
+    this->_hitPoints = 100; // FragTrap;
+    this->_energyPoints = 50; // ScavTrap;
+    this->_attackDamage = 30; // FragTrap;
     std::cout << "The DiamondTrap Constructor has been called " << std::endl;
 }
 
@@ -25,10 +37,8 @@ DiamondTrap::~DiamondTrap()
 DiamondTrap:: DiamondTrap(const std::string& name) : ClapTrap(name + "_clap_name"),
       ScavTrap(name),
       FragTrap(name),
-      
       _name(name)
 {
-    ClapTrap::_name = name + "_clap_name";
     this->_hitPoints = FragTrap::_hitPoints;
     this->_energyPoints = ScavTrap::_energyPoints;
     this->_attackDamage = FragTrap::_attackDamage;

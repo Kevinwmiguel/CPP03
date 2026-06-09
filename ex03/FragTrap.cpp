@@ -27,7 +27,7 @@ FragTrap& FragTrap::operator=(const FragTrap& other)
 FragTrap:: FragTrap(std::string name)
 {
     std::cout << "FragTrap " << name << " created." << std::endl;
-    _name = name;
+    //_name = name;
     _hitPoints = 100;
     _energyPoints = 100;
     _attackDamage = 30;
