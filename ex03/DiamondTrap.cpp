@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DIamondTrap.cpp                                    :+:      :+:    :+:   */
+/*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kwillian <kwillian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 10:56:04 by kwillian          #+#    #+#             */
-/*   Updated: 2026/06/09 15:51:36 by kwillian         ###   ########.fr       */
+/*   Updated: 2026/06/10 00:23:19 by kwillian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,17 @@ DiamondTrap::~DiamondTrap()
     std::cout << "The DiamondTrap Destructor has been called " << std::endl;
 }
 
-DiamondTrap:: DiamondTrap(const std::string& name) : ClapTrap(name + "_clap_name"),
+DiamondTrap::DiamondTrap(const std::string& name)
+    : ClapTrap(name + "_clap_name"),
       ScavTrap(name),
       FragTrap(name),
       _name(name)
 {
-    this->_hitPoints = FragTrap::_hitPoints;
-    this->_energyPoints = ScavTrap::_energyPoints;
-    this->_attackDamage = FragTrap::_attackDamage;
-    std::cout << "The DiamondTrap Constructor has been called " << std::endl;
+    _hitPoints = 100;      // FragTrap
+    _energyPoints = 50;    // ScavTrap
+    _attackDamage = 30;    // FragTrap
+
+    std::cout << "The DiamondTrap Constructor has been called" << std::endl;
 }
 
 void DiamondTrap::whoAmI()
