@@ -24,6 +24,12 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other)
     return *this;
 }
 
+ClapTrap::ClapTrap(const ClapTrap& other)
+{
+    *this = other;
+    std::cout << "The ClapTrap copy constructor has been called" << std::endl;
+}
+
 ClapTrap:: ClapTrap(std::string name)
 {
     std::cout << "ClapTrap " << name << " created." << std::endl;

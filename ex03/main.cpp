@@ -17,13 +17,13 @@ int main()
     DiamondTrap diamond("Diamond");
 
     diamond.attack("Enemy");
-    // diamond.takeDamage(40);
-    // diamond.beRepaired(25);
-    // for (int i = 0; i < 5; i++)
-    //     diamond.attack("Dummy");
-    // diamond.guardGate();
-    // diamond.highFivesGuys();
-    // diamond.whoAmI();
-    diamond.getinfo();
+    diamond.takeDamage(40);
+    diamond.beRepaired(25);
+    for (int i = 0; i < 5; i++)
+        diamond.attack("Dummy");
+    diamond.guardGate();
+    diamond.highFivesGuys();
+    diamond.whoAmI();
+    //diamond.getinfo();
     return (0);
 }

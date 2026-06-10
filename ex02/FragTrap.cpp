@@ -12,6 +12,13 @@
 
 #include "FragTrap.hpp"
 
+FragTrap::FragTrap(const FragTrap& other)
+    : ClapTrap(other)
+{
+    *this = other;
+    std::cout << "The FlagTrap copy constructor has been called" << std::endl;
+}
+
 FragTrap& FragTrap::operator=(const FragTrap& other)
 {
     if (this != &other)

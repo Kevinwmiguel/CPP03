@@ -1,6 +1,6 @@
 NAME	 =	Nowitsweird
 
-SRCS     =	ClapTrap.cpp DiamondTrap.cpp FragTrap.cpp ScavTrap.cpp main.cpp
+SRCS     =	ClapTrap.cpp FragTrap.cpp ScavTrap.cpp DiamondTrap.cpp main.cpp
 
 OBJS     =   $(SRCS:.cpp=.o)
 

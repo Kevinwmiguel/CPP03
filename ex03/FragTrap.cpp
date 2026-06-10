@@ -24,6 +24,13 @@ FragTrap& FragTrap::operator=(const FragTrap& other)
     return *this;
 }
 
+FragTrap::FragTrap(const FragTrap& other)
+    : ClapTrap(other)
+{
+    *this = other;
+    std::cout << "The FlagTrap copy constructor has been called" << std::endl;
+}
+
 FragTrap:: FragTrap(std::string name)
 {
     std::cout << "FragTrap " << name << " created." << std::endl;

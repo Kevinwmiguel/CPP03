@@ -12,6 +12,12 @@
 
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap(const ClapTrap& other)
+{
+    *this = other;
+    std::cout << "The ClapTrap copy constructor has been called" << std::endl;
+}
+
 ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 {
     if (this != &other)

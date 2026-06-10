@@ -19,7 +19,7 @@ int main()
     scav.takeDamage(30);
     scav.beRepaired(15);
     scav.guardGate();
-    scav.getinfo();
+    //scav.getinfo();
     for (int i = 0; i < 4; i++)
         scav.attack("Target");
 

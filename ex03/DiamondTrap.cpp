@@ -34,6 +34,25 @@ DiamondTrap::~DiamondTrap()
     std::cout << "The DiamondTrap Destructor has been called " << std::endl;
 }
 
+DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other)
+{
+    if (this != &other)
+    {
+        _name = other._name;
+        _hitPoints = other._hitPoints;
+        _energyPoints = other._energyPoints;
+        _attackDamage = other._attackDamage;
+    }
+    return *this;
+}
+
+DiamondTrap::DiamondTrap(const DiamondTrap& other)
+    : ClapTrap(other), ScavTrap(other), FragTrap(other)
+{
+    *this = other;
+    std::cout << "The DiamondTrap copy constructor has been called" << std::endl;
+}
+
 DiamondTrap::DiamondTrap(const std::string& name)
     : ClapTrap(name + "_clap_name"),
       ScavTrap(name),

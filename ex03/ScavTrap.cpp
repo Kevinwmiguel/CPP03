@@ -21,6 +21,13 @@
 // 		std::endl;   
 // }
 
+ScavTrap::ScavTrap(const ScavTrap& other)
+    : ClapTrap(other)
+{
+    *this = other;
+    std::cout << "The ScavTrap copy constructor has been called" << std::endl;
+}
+
 ScavTrap:: ScavTrap()
 {
 	std::cout << "The ScavTrap constructor has been called" << std::endl;

@@ -31,6 +31,13 @@ ScavTrap:: ~ScavTrap()
 	std::cout << "The ScavTrap destructor has been called" << std::endl;
 }
 
+ScavTrap::ScavTrap(const ScavTrap& other)
+    : ClapTrap(other)
+{
+    *this = other;
+    std::cout << "The ScavTrap copy constructor has been called" << std::endl;
+}
+
 void ScavTrap::guardGate()
 {
 	if (this->_energyPoints > 0 && this->_hitPoints > 0)
